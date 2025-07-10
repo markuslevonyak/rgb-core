@@ -307,7 +307,7 @@ pub enum VerificationError<Seal: RgbSeal> {
 
 // We need manual implementation since otherwise we get an unneeded `Seal::PubWitness: Debug` bound
 impl<Seal: RgbSeal> Debug for VerificationError<Seal> {
-    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result { write!(f, "{}", self) }
+    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result { write!(f, "{self}") }
 }
 
 #[cfg(test)]
